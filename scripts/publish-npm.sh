@@ -1,3 +1,6 @@
+# script used to publish package to npm and push new tag
+# step 1 - change version from package json
+# step 2 - run ./scripts/publish-npm.sh $version  i.e ./scripts/publish-npm.sh 0.0.3
 set -e
 
 BRANCH=`git rev-parse --abbrev-ref HEAD`
