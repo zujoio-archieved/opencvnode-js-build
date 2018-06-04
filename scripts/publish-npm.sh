@@ -8,8 +8,8 @@ if [ "$BRANCH" != "master" ]; then
   exit
 fi
 
-if ! [[ "$ORIGIN" =~ tensorflow/tfjs-node ]]; then
-  echo "Error: Switch to the main repo (opencvjs-node) before publishing."
+if ! [[ "$ORIGIN" =~opencvnode-js-build ]]; then
+  echo "Error: Switch to the main repo (opencvnode-js-build) before publishing."
   exit
 fi
 
