@@ -8,7 +8,7 @@ if [ "$BRANCH" != "master" ]; then
   exit
 fi
 
-if ! [[ "$ORIGIN" =~opencvnode-js-build ]]; then
+if ! [[ "$ORIGIN" =~ opencvnode-js-build ]]; then
   echo "Error: Switch to the main repo (opencvnode-js-build) before publishing."
   exit
 fi
@@ -20,7 +20,7 @@ npm publish
 echo 'Published CPU-VERSION a new package to npm.'
 
 # Build GPU:
-sed -i -e 's/opencvjs-node"/opencvjs-node-gpu"/' package.json
+sed -i -e 's/opencvnode-js-build"/opencvnode-js-build-gpu"/' package.json
 
 npm pack
 npm publish
