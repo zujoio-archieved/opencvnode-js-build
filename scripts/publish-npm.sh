@@ -29,5 +29,11 @@ echo 'Published GPU-VERSION a new package to npm.'
 # Revert GPU changes:
 git checkout .
 
+if [ $# -ne 0 ]
+  then
+    git tag $1
+    git push --tags
+fi
+
 
 
