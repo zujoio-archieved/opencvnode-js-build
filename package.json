@@ -1,0 +1,31 @@
+{
+  "name": "opencvnode-js-build",
+  "version": "0.0.0",
+  "description": "build for opencv",
+  "main": "index.js",
+  "scripts": {
+    "install": "node ./install.js",
+    "test": "mocha --recursive ./test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zujoio/opencvnode-js-build.git"
+  },
+  "keywords": [
+    "opencv",
+    "node js"
+  ],
+  "author": "arjun-kava",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/zujoio/opencvnode-js-build/issues"
+  },
+  "homepage": "https://github.com/zujoio/opencvnode-js-build#readme",
+  "dependencies": {
+    "npmlog": "^4.1.2"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.1.1"
+  }
+}
