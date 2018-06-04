@@ -1,16 +1,5 @@
 set -e
 
-# Build CPU:
-npm pack
-
-# Build GPU:
-sed -i -e 's/opencvjs-node"/opencvjs-node-gpu"/' package.json
-npm pack
-
-# Revert GPU changes:
-git checkout .
-
-
 BRANCH=`git rev-parse --abbrev-ref HEAD`
 ORIGIN=`git config --get remote.origin.url`
 
@@ -24,7 +13,21 @@ if ! [[ "$ORIGIN" =~ tensorflow/tfjs-node ]]; then
   exit
 fi
 
+# Build CPU:
+npm pack
 npm publish
 
-echo 'Published a new package to npm.'
+echo 'Published CPU-VERSION a new package to npm.'
+
+# Build GPU:
+sed -i -e 's/opencvjs-node"/opencvjs-node-gpu"/' package.json
+
+npm pack
+npm publish
+echo 'Published GPU-VERSION a new package to npm.'
+
+# Revert GPU changes:
+git checkout .
+
+
 
