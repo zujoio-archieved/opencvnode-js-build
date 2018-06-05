@@ -1,6 +1,6 @@
 {
   "name": "opencvnode-js-build",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "build for opencv",
   "main": "index.js",
   "scripts": {
