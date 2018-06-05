@@ -12,7 +12,7 @@ fi
 # if you forget to commit
 PORCELAIN=`git status --porcelain`
 if [ -n "$PORCELAIN" ]; then
-  echo "please commit changes first."; 
+  echo "Please commit changes first."; 
   echo $PORCELAIN
   exit;
 fi
@@ -29,6 +29,7 @@ if ! [[ "$ORIGIN" =~ opencvnode-js-build ]]; then
   echo "Error: Switch to the main repo (opencvnode-js-build) before publishing."
   exit
 fi
+
 
 # Build CPU:
 npm pack
@@ -47,6 +48,7 @@ git checkout .
 
 if [ $# -ne 0 ]
   then
+    git push # verify everthing on cloud before creting tag
     git tag $1
     git push --tags
     rm -rf opencvnode-js-build-$1-tgz opencvnode-js-build-gpu-$1-tgz
