@@ -32,16 +32,15 @@ fi
 
 # Build CPU:
 npm pack
-
-echo 'Published CPU-VERSION a new package to npm.'
+npm publish
+echo '=== 📦 📦 Published CPU-VERSION a new package to npm. 📦 📦 ==='
 
 # Build GPU:
 sed -i -e 's/opencvnode-js-build"/opencvnode-js-build-gpu"/' package.json
 
 npm pack
-
 npm publish
-echo 'Published GPU-VERSION a new package to npm.'
+echo '=== 📦 📦 Published GPU-VERSION a new package to npm. 📦 📦 ==='
 
 # Revert GPU changes:
 git checkout .
