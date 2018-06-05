@@ -30,7 +30,7 @@ const opencvBuild = path.join(opencvRoot, 'build');
 const opencvInclude = path.join(opencvBuild, 'include');
 const opencvLibDir = path.join(opencvBuild, 'lib');
 const opencvBinDir = path.join(opencvBuild, 'bin');
-const opencvTag = '3.4.1';
+const opencvTag = '3.4.0';
 const opencvRepo = 'https://github.com/opencv/opencv.git';
 const opencvContribRepo = 'https://github.com/opencv/opencv_contrib.git';
 
