@@ -11,7 +11,7 @@ const opencvModules = [
     'opencv_imgproc',
     'opencv_features2d',
     'opencv_calib3d',
-    'photo',
+    'opencv_photo',
     'opencv_objdetect',
     'opencv_ml',
     'opencv_video',
