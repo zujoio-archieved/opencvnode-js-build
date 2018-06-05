@@ -17,9 +17,6 @@ if [ -n "$PORCELAIN" ]; then
   exit;
 fi
 
-
-exit
-
 BRANCH=`git rev-parse --abbrev-ref HEAD`
 ORIGIN=`git config --get remote.origin.url`
 
