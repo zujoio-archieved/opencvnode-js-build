@@ -3,6 +3,23 @@
 # step 2 - run ./scripts/publish-npm.sh $version  i.e ./scripts/publish-npm.sh 0.0.3
 set -e
 
+if [ $# -eq 0 ]
+  then
+    echo "Please specify version."
+    exit
+fi
+
+# if you forget to commit
+PORCELAIN=`git status --porcelain`
+if [ -n "$PORCELAIN" ]; then
+  echo "please commit changes first."; 
+  echo $PORCELAIN
+  exit;
+fi
+
+
+exit
+
 BRANCH=`git rev-parse --abbrev-ref HEAD`
 ORIGIN=`git config --get remote.origin.url`
 
