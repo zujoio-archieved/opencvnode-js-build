@@ -11,7 +11,7 @@ const opencvModules = [
     'opencv_imgproc',
     'opencv_features2d',
     'opencv_calib3d',
-    'photo',
+    'opencv_photo',
     'opencv_objdetect',
     'opencv_ml',
     'opencv_video',
@@ -28,6 +28,7 @@ const opencvContribSrc = path.join(opencvRoot, 'opencv_contrib');
 const opencvContribModules = path.join(opencvContribSrc, 'modules');
 const opencvBuild = path.join(opencvRoot, 'build');
 const opencvInclude = path.join(opencvBuild, 'include');
+const opencvIncludeCC = path.join(opencvInclude, 'opencv');
 const opencvLibDir = path.join(opencvBuild, 'lib');
 const opencvBinDir = path.join(opencvBuild, 'bin');
 const opencvTag = '3.4.0';
@@ -53,6 +54,7 @@ module.exports = {
      */
     opencvBuild,
     opencvInclude,
+    opencvIncludeCC,
     opencvLibDir,
     opencvBinDir,
     /**

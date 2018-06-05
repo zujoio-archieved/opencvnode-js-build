@@ -3,6 +3,7 @@ const {
     opencvContribSrc,
     opencvBuild,
     opencvInclude,
+    opencvIncludeCC,
     opencvLibDir,
     opencvModules
 } = require('./config');
@@ -20,6 +21,7 @@ module.exports = {
 
     // includes
     opencvInclude,
+    opencvIncludeCC,
 
     // libs
     opencvLibDir,
