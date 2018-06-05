@@ -46,6 +46,9 @@ describe('opencv import libs and includes', () => {
     it('should check opencvInclude is not undefined.', () => {
         resolvePath(cvBuild.opencvInclude);
     });
+    it('should check opencvIncludeCC is not undefined.', () => {
+        resolvePath(cvBuild.opencvIncludeCC);
+    });
     it('should check opencvLibDir is not undefined.', () => {
         resolvePath(cvBuild.opencvLibDir);
     });
